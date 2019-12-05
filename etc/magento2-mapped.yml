@@ -1,0 +1,241 @@
+tables:
+- name: admin_user
+  columns:
+    email: unique_email
+    firstname: firstname
+    lastname: lastname
+    password: password
+    username: username
+- name: catalog_category_entity_varchar
+  columns:
+    value: productcategoryname
+- name: catalog_product_entity
+  columns:
+    sku: productsku
+- name: catalog_product_entity_text
+  columns:
+    value: productdescription
+- name: catalog_product_entity_varchar
+  columns:
+    value: productname
+- name: customer_entity
+  columns:
+    email: unique_email
+    firstname: firstname
+    lastname: lastname
+    vat_id: vat_number
+- name: customer_grid_flat
+  columns:
+    billing_city: city
+    billing_company: company
+    billing_country_id: country_code
+    billing_fax: telephone
+    billing_firstname: firstname
+    billing_full: street
+    billing_lastname: lastname
+    billing_postcode: postcode
+    billing_region: state
+    billing_street: street
+    billing_telephone: telephone
+    billing_vat_id: vat_number
+    dob: date
+    email: unique_email
+    gender: gender
+    name: fullname
+    shipping_full: street
+    taxvat: vat_number
+- name: customer_address_entity
+  columns:
+    city: city
+    company: company
+    fax: telephone
+    firstname: firstname
+    lastname: lastname
+    postcode: postcode
+    street: street
+    telephone: telephone
+    vat_id: vat_number
+- name: newsletter_subscriber
+  columns:
+    subscriber_confirm_code: md5
+    subscriber_email: unique_email
+- name: quote
+  columns:
+    customer_dob: datetime
+    customer_email: unique_email
+    customer_firstname: firstname
+    customer_lastname: lastname
+    customer_middlename: firstname
+    customer_note: note255
+    customer_prefix: title
+    customer_suffix: customer_suffix
+    remote_ip: ipv4
+- name: quote_address
+  columns:
+    city: city
+    company: company
+    country_id: country_code
+    email: unique_email
+    fax: telephone
+    firstname: firstname
+    lastname: lastname
+    postcode: postcode
+    prefix: title
+    region: state
+    region_id: region_id
+    street: street
+    suffix: customer_suffix
+    telephone: telephone
+    vat_id: vat_number
+- name: quote_item
+  columns:
+    sku: productsku
+    name: productname
+- name: rating_option_vote
+  columns:
+    remote_ip: ipv4
+- name: review_detail
+  columns:
+    nickname: username
+- name: sales_bestsellers_aggregated_daily
+  columns:
+    product_name: productname
+- name: sales_bestsellers_aggregated_monthly
+  columns:
+    product_name: productname
+- name: sales_bestsellers_aggregated_yearly
+  columns:
+    product_name: productname
+- name: sales_creditmemo_grid
+  columns:
+    billing_address: street
+    billing_name: fullname
+    customer_email: unique_email
+    customer_name: fullname
+    shipping_address: street
+- name: sales_invoice_grid
+  columns:
+    billing_address: street
+    billing_name: fullname
+    customer_email: unique_email
+    customer_name: fullname
+    shipping_address: street
+- name: sales_invoice_item
+  columns:
+    sku: productsku
+    name: productname
+- name: sales_order
+  columns:
+    customer_dob: datetime
+    customer_email: unique_email
+    customer_firstname: firstname
+    customer_lastname: lastname
+    customer_middlename: firstname
+    customer_prefix: title
+    customer_suffix: customer_suffix
+    remote_ip: ipv4
+    x_forwarded_for: ipv4
+- name: sales_order_address
+  columns:
+    city: city
+    company: company
+    email: unique_email
+    firstname: firstname
+    lastname: lastname
+    middlename: firstname
+    postcode: postcode
+    prefix: title
+    region: state
+    street: street
+    suffix: customer_suffix
+    telephone: telephone
+- name: sales_order_grid
+  columns:
+    billing_address: street
+    billing_name: fullname
+    customer_email: unique_email
+    cutomer_name: fullname
+    shipping_address: street
+    shipping_name: fullname
+- name: sales_order_item
+  columns:
+    sku: productsku
+    name: productname
+- name: sales_shipment_grid
+  columns:
+    billing_address: street
+    billing_name: fullname
+    customer_email: unique_email
+    customer_name: fullname
+    shipping_address: street
+    shipping_name: fullname
+- name: sales_shipment_item
+  columns:
+    name: productname
+    sku: productsku
+- name: sales_shipment_track
+  columns:
+    track_number: shipment_tracking_number
+- name: sendfriend_log
+  columns:
+    ip: ipv4
+- name: tm_blog_post
+  columns:
+    identifier: blog_post_slug
+    title: blog_post_title
+    content: blog_post_content
+eav:
+- name: customer
+  attributes:
+    "4": title
+    "5": firstname
+    "6": firstname
+    "7": lastname
+    "8": customer_suffix
+    "9": unique_email
+    "11": datetime
+    "12": password
+    "17": vat_number
+    "20": gender
+    dob: datetime
+    email: unique_email
+    firstname: firstname
+    gender: gender
+    lastname: lastname
+    middlename: firstname
+    password_hash: password
+    prefix: title
+    suffix: customer_suffix
+    taxvat: vat_number
+- name: customer_address
+  attributes:
+    "22": title
+    "23": firstname
+    "24": firstname
+    "25": lastname
+    "26": customer_suffix
+    "27": company
+    "28": street
+    "29": city
+    "30": country_code
+    "31": state
+    "32": region_id
+    "33": postcode
+    "34": telephone
+    "35": telephone
+    "36": vat_number
+    city: city
+    company: company
+    country_id: country_code
+    fax: telephone
+    firstname: firstname
+    lastname: lastname
+    middlename: firstname
+    postcode: postcode
+    prefix: title
+    region: state
+    region_id: region_id
+    street: street
+    suffix: customer_suffix
+    telephone: telephone
+    vat_id: vat_number
