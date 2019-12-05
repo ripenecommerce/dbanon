@@ -1,4 +1,16 @@
 dbanon
 tmp/*
 src/bindata.go
+
+# ignore development environment files
+/.idea
+/.vscode
+
+# OS/IDE auto-generated files
 .DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+_notes
